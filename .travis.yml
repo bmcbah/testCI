@@ -3,10 +3,11 @@ php:
   - '7.0'
   - '7.1'
 
-addons :
-  sonarqube: "php"
-  token:
-    secure: 52afd15d9e9c25fa45fc9ea2cd403c89b07c30dc
+addons:
+  sonarcloud:
+    organization: "sonarcloud_organization_key" # the key of the org you chose at step #3
+    token:
+      secure: d08d5db68e341d6e4ae811090ebf8c1d8249b781 # encrypted value of your token
 
 script:
    - composer install
