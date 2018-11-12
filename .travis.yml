@@ -5,7 +5,7 @@ php:
 
 addons:
   sonarcloud:
-    organization: "sonarcloud_organization_key" # the key of the org you chose at step #3
+    organization: "bmcbah-github" # the key of the org you chose at step #3
     token:
       secure: d08d5db68e341d6e4ae811090ebf8c1d8249b781 # encrypted value of your token
 
