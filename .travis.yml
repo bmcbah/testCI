@@ -1,15 +1,13 @@
 language: php
 php:
-  - '7.0'
   - '7.1'
-
-#addons:
-#  sonarcloud:
-#    organization: "bmcbah-github" # the key of the org you chose at step #3
-#    token:
-#      secure: d08d5db68e341d6e4ae811090ebf8c1d8249b781 # encrypted value of your token
-
+dist: trusty
+install:
+  - composer install
+  - ant
 script:
-   - composer install
-   - vendor/bin/phpunit
-   - sonar-scanner
+  - phpunit
+after_success:
+  - vendor/bin/test-reporter
+  - vendor/bin/coveralls -v
+  - sonar-scanner
