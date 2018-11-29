@@ -6,7 +6,7 @@ install:
   - composer install
 script:
   - phpunit
-  -vendor/bin/phpunit
+  - vendor/bin/phpunit
 after_success:
   - vendor/bin/test-reporter
   - vendor/bin/coveralls -v
