@@ -2,6 +2,10 @@ language: php
 php:
   - '7.1'
 dist: trusty
+
+addons:
+  sonarqube: true
+
 install:
   - composer install
 script:
@@ -10,4 +14,4 @@ script:
 after_success:
   - vendor/bin/test-reporter
   - vendor/bin/coveralls -v
-  - sonar-scanner
+  - sonar-scanner -D sonar.host.url=127.0.0.1
