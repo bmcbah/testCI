@@ -11,6 +11,7 @@ install:
 script:
   - phpunit
   - vendor/bin/phpunit
+  - sonar-scanner -D sonar.host.url=127.0.0.1
 after_success:
   - vendor/bin/test-reporter
   - vendor/bin/coveralls -v
